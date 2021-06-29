@@ -2,6 +2,10 @@
 
 <ul>
   <% @events.each do |event| %>
-    <li><%= event.date %></li>
+  <li>
+    <p><%= event.date %></p>
+    <p><%= event.name %></p>
+    <p><%= event.venue %></p>
+  </li>
   <% end %>
 </ul>

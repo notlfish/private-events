@@ -1,0 +1,11 @@
+<h2>Edit Event<h2>
+    <%= form_with model: @event do |form|%>
+    <%= form.label :name, "Event Name" %>
+    <%= form.text_field :Event %>
+    <%= form.label :Date, "Date" %>
+    <%= form.text_field :Date %>
+    <%= form.label :Vanue, "Venue" %>
+    <%= form.password_field :Venue %><br>
+    <%= form.submit %>
+    <%end%>
+    <%= render "errors", event: @event %>
