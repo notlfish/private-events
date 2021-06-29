@@ -18,7 +18,7 @@
   <div class="log-bar">
     <ul class="nav-list">
       <% if user_signed_in?  %>
-      <li><%= current_user.name %></li>
+      <li><%= link_to current_user.name, user_path(current_user), class:"log" %></li>
       <li><%= link_to 'Log Out', destroy_user_session_path, method: 'delete', class:"log" %></li>
 
       <% else %>
