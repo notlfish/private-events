@@ -3,9 +3,9 @@
 <ul>
   <% @events.each do |event| %>
   <li>
-    <p><%= event.date %></p>
-    <p><%= event.name %></p>
-    <p><%= event.venue %></p>
+    <span>Event: <%= event.name %></span><br>
+    <span>Venue: <%= event.venue %></span><br>
+    <span>Date: <%= event.date %></span><br>
   </li>
   <% end %>
 </ul>

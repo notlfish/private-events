@@ -1,0 +1,11 @@
+<h1>Event's info</h1>
+
+<ul>
+  <li><%= @event.name %></li>
+  <li><%= @event.venue %></li>
+  <li>
+    <span class="date"><%= @event.date.strftime("%b %d") %></span>
+    at
+    <span class="time"><%= @event.date.strftime("%H:%M") %></span>
+  </li>
+</ul>

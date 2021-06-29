@@ -8,9 +8,9 @@ class UsersController < ApplicationController
   private
 
   def same_profile
-    unless current_user.id.to_s == params[:id]
-      flash[:alert] = "You dont have access to this page"
-      redirect_to root_path
-    end
+    return if current_user && current_user.id.to_s == params[:id]
+
+    flash[:alert] = 'You dont have access to this page'
+    redirect_to root_path
   end
 end
