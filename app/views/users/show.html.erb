@@ -1,7 +1,22 @@
-<h1>Events organized by <%= @user.name%></h1>
+<h1>Events of <%= @user.name%></h1>
 
-<ul>
-  <% @user.created_events.each do |event| %>
-  <li><%= event.name %></li>
-  <% end %>
-</ul>
+<div>
+  <h3>Organized events</h3>
+  <ul>
+    <% @user.created_events.each do |event| %>
+      <li><%= event.name %></li>
+    <% end %>
+  </ul>
+</div>
+
+<div>
+  <h3>Attended events</h3>
+  <ul>
+    <% @user.attended_events.each do |event| %>
+      <li>
+        <span><%= event.name %></span>
+        <span><%= event.date.strftime('%d %b') %></span>
+      </li>
+    <% end %>
+  </ul>
+</div>
