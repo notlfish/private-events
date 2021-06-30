@@ -6,6 +6,9 @@
     <span>Event: <%= event.name %></span><br>
     <span>Venue: <%= event.venue %></span><br>
     <span>Date: <%= event.date %></span><br>
+    <% if user_signed_in? %>
+      <%= link_to 'Join event', event_attendances_path(event: event), method: 'create'  %>
+    <% end %>
   </li>
   <% end %>
 </ul>
