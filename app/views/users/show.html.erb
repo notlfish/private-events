@@ -4,7 +4,7 @@
   <h3>Organized events</h3>
   <ul>
     <% @user.created_events.each do |event| %>
-      <li><%= event.name %></li>
+    <li><%= event.name %></li>
     <% end %>
   </ul>
 </div>
@@ -13,10 +13,33 @@
   <h3>Attended events</h3>
   <ul>
     <% @user.attended_events.each do |event| %>
-      <li>
-        <span><%= event.name %></span>
-        <span><%= event.date.strftime('%d %b') %></span>
-      </li>
+    <li>
+      <span><%= event.name %></span>
+      <span><%= event.date.strftime('%d %b') %></span>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+<div>
+  <h3>Past events</h3>
+  <ul>
+    <% @user.attended_events.where(["date < ?", DateTime.now]).each do |event| %>
+    <li>
+      <span><%= event.name %></span>
+      <span><%= event.date.strftime('%d %b') %></span>
+    </li>
+    <% end %>
+  </ul>
+</div>
+<div>
+  <h3>Future events</h3>
+  <ul>
+    <% @user.attended_events.where(["date > ?",  DateTime.now]).each do |event| %>
+    <li>
+      <span><%= event.name %></span>
+      <span><%= event.date.strftime('%d %b') %></span>
+    </li>
     <% end %>
   </ul>
 </div>
