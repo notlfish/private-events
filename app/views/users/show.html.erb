@@ -4,7 +4,9 @@
   <h2>Organized events</h2>
   <ul>
     <% @user.created_events.each do |event| %>
-    <li><%= event.name %></li>
+    <li><%= event.name %>
+      <%= link_to "Delete Event",  event, method: :delete, data: { confirm: "Are You Sure?" }%>
+    </li>
     <% end %>
   </ul>
 </div>
