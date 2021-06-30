@@ -28,6 +28,11 @@
     <li>
       <span><%= event.name %></span>
       <span><%= event.date.strftime('%d %b') %></span>
+      <span>
+        <%= link_to "I won't assist, no no",
+         destroy_attendance_path(user: @user, event: event),
+         method: :delete %>
+      </span>
     </li>
     <% end %>
 </div>

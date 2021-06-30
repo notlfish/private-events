@@ -8,4 +8,11 @@ class EventAttendancesController < ApplicationController
       render root_path
     end
   end
+
+  def destroy
+    event = Event.find(params[:event])
+    user = User.find(params[:user])
+    user.attended_events.destroy(event)
+    redirect_to user
+  end
 end
