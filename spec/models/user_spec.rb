@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'validations' do
+RSpec.describe 'validations' do
   let(:user) do
     User.new(name: 'Bob',
              email: 'bob@example.com',
