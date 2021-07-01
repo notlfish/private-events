@@ -4,9 +4,9 @@ RSpec.describe 'Signing and Loging functionality' do
                       email: 'bob@example.com',
                       password: '123456',
                       password_confirmation: '123456')
-    success = bob.created_events.create(name: 'Capybara begun working',
+    success = bob.created_events.create(name: 'Capybara began working',
                                         venue: 'Fortune\'s computer',
-                                        date: DateTime.now)
+                                        date: DateTime.now.tomorrow)
     bob.attended_events << success
   end
 
@@ -79,6 +79,34 @@ RSpec.describe 'Signing and Loging functionality' do
       click_button 'Log in'
       click_link('Join event')
       expect(page).to have_content 'Event\'s info'
+    end
+  end
+
+  describe 'The not to assist process', type: :feature do
+    it 'signs me in' do
+      visit 'users/sign_in'
+      within('#new_user') do
+        fill_in 'Email', with: 'bob@example.com'
+        fill_in 'Password', with: '123456'
+      end
+      click_button 'Log in'
+      click_link('Bob')
+      click_link("I won't assist, no no")
+      expect(page).to_not have_content "I won't assist, no no"
+    end
+  end
+
+  describe 'The deleting of the event process', type: :feature do
+    it 'signs me in' do
+      visit 'users/sign_in'
+      within('#new_user') do
+        fill_in 'Email', with: 'bob@example.com'
+        fill_in 'Password', with: '123456'
+      end
+      click_button 'Log i'
+      click_link('Bob')
+      click_link("I won't assist, no no")
+      expect(page).to_not have_content "Rspec began working"
     end
   end
 end
