@@ -103,7 +103,7 @@ RSpec.describe 'Signing and Loging functionality' do
         fill_in 'Email', with: 'bob@example.com'
         fill_in 'Password', with: '123456'
       end
-      click_button 'Log i'
+      click_button 'Log in'
       click_link('Bob')
       click_link("I won't assist, no no")
       expect(page).to_not have_content "Rspec began working"
