@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 gem 'devise'
 # gem 'bcrypt', '~> 3.1.7'
+gem 'rexml', '~> 3.2', '>= 3.2.5'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
