@@ -1,0 +1,150 @@
+
+Randomized with seed 13962
+FF
+
+Failures:
+
+  1) Signing and Loging functionality the signup process registers a new user
+     Got 0 failures and 2 other errors:
+
+     1.1) Failure/Error: visit 'users/sign_up'
+
+          ArgumentError:
+            rack-test requires a rack application, but none was given
+          # ./spec/system/log_spec.rb:4:in `block (3 levels) in <top (required)>'
+
+     1.2) Failure/Error: raise ArgumentError, 'rack-test requires a rack application, but none was given' unless app
+
+          ArgumentError:
+            rack-test requires a rack application, but none was given
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara/rack_test/driver.rb:18:in `initialize'
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara/registrations/drivers.rb:4:in `new'
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara/registrations/drivers.rb:4:in `block in <top (required)>'
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara/session.rb:104:in `driver'
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara/session.rb:130:in `reset!'
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara.rb:325:in `block in reset_sessions!'
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara.rb:325:in `reverse_each'
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara.rb:325:in `reset_sessions!'
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara/rspec.rb:20:in `block (2 levels) in <top (required)>'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:455:in `instance_exec'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:455:in `instance_exec'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:372:in `run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:529:in `block in run_owned_hooks_for'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:528:in `each'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:615:in `block in run_example_hooks_for'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:614:in `each'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:485:in `run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:515:in `run_after_example'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:281:in `block in run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:508:in `block in with_around_and_singleton_context_hooks'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:465:in `block in with_around_example_hooks'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:486:in `block in run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:624:in `run_around_example_hooks_for'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:486:in `run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:465:in `with_around_example_hooks'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:508:in `with_around_and_singleton_context_hooks'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:259:in `run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:644:in `block in run_examples'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:640:in `map'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:640:in `run_examples'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:606:in `run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:607:in `block in run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:607:in `map'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:607:in `run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:121:in `map'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/configuration.rb:2067:in `with_suite_hooks'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:116:in `block in run_specs'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/reporter.rb:74:in `report'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:115:in `run_specs'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:89:in `run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:71:in `run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:45:in `invoke'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/exe/rspec:4:in `<top (required)>'
+          # /usr/bin/rspec:23:in `load'
+          # /usr/bin/rspec:23:in `<main>'
+          # 
+          #   Showing full backtrace because every line was filtered out.
+          #   See docs for RSpec::Configuration#backtrace_exclusion_patterns and
+          #   RSpec::Configuration#backtrace_inclusion_patterns for more information.
+
+  2) Signing and Loging functionality the signin process signs me in
+     Got 0 failures and 2 other errors:
+
+     2.1) Failure/Error: visit 'users/sign_in'
+
+          ArgumentError:
+            rack-test requires a rack application, but none was given
+          # ./spec/system/log_spec.rb:22:in `block (3 levels) in <top (required)>'
+
+     2.2) Failure/Error: raise ArgumentError, 'rack-test requires a rack application, but none was given' unless app
+
+          ArgumentError:
+            rack-test requires a rack application, but none was given
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara/rack_test/driver.rb:18:in `initialize'
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara/registrations/drivers.rb:4:in `new'
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara/registrations/drivers.rb:4:in `block in <top (required)>'
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara/session.rb:104:in `driver'
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara/session.rb:130:in `reset!'
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara.rb:325:in `block in reset_sessions!'
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara.rb:325:in `reverse_each'
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara.rb:325:in `reset_sessions!'
+          # /usr/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara/rspec.rb:20:in `block (2 levels) in <top (required)>'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:455:in `instance_exec'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:455:in `instance_exec'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:372:in `run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:529:in `block in run_owned_hooks_for'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:528:in `each'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:528:in `run_owned_hooks_for'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:615:in `block in run_example_hooks_for'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:614:in `each'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:614:in `run_example_hooks_for'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:485:in `run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:515:in `run_after_example'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:281:in `block in run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:508:in `block in with_around_and_singleton_context_hooks'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:465:in `block in with_around_example_hooks'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:486:in `block in run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:624:in `run_around_example_hooks_for'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/hooks.rb:486:in `run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:465:in `with_around_example_hooks'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:508:in `with_around_and_singleton_context_hooks'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example.rb:259:in `run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:644:in `block in run_examples'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:640:in `map'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:640:in `run_examples'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:606:in `run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:607:in `block in run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:607:in `map'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/example_group.rb:607:in `run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:121:in `block (3 levels) in run_specs'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:121:in `map'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:121:in `block (2 levels) in run_specs'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/configuration.rb:2067:in `with_suite_hooks'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:116:in `block in run_specs'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/reporter.rb:74:in `report'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:115:in `run_specs'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:89:in `run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:71:in `run'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/lib/rspec/core/runner.rb:45:in `invoke'
+          # /usr/lib/ruby/gems/3.0.0/gems/rspec-core-3.10.1/exe/rspec:4:in `<top (required)>'
+          # /usr/bin/rspec:23:in `load'
+          # /usr/bin/rspec:23:in `<main>'
+          # 
+          #   Showing full backtrace because every line was filtered out.
+          #   See docs for RSpec::Configuration#backtrace_exclusion_patterns and
+          #   RSpec::Configuration#backtrace_inclusion_patterns for more information.
+
+Finished in 0.0041 seconds (files took 0.93488 seconds to load)
+2 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/system/log_spec.rb:3 # Signing and Loging functionality the signup process registers a new user
+rspec ./spec/system/log_spec.rb:21 # Signing and Loging functionality the signin process signs me in
+
+Randomized with seed 13962
+
