@@ -68,4 +68,17 @@ RSpec.describe 'Signing and Loging functionality' do
       expect(page).to have_content 'Invalid Email or password'
     end
   end
+
+  describe 'the event joining process', type: :feature do
+    it 'signs me in' do
+      visit 'users/sign_in'
+      within('#new_user') do
+        fill_in 'Email', with: 'bob@example.com'
+        fill_in 'Password', with: '123456'
+      end
+      click_button 'Log in'
+      click_link('Join event')
+      expect(page).to have_content 'Event\'s info'
+    end
+  end
 end
