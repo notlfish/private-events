@@ -106,9 +106,9 @@ RSpec.describe 'Signing and Loging functionality' do
       end
       click_button 'Log in'
       click_link('Bob')
+      expect(page).to have_content "Capybara began working"
       click_link('Delete Event')
-      #expect page to open alert, click ok
-      expect(page).to_not have_content "Tea party"
+      expect(page).to_not have_content "Capybara began working"
     end
   end
 end
