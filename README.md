@@ -4,6 +4,10 @@ Simple rails webapp for organizing events.
 
 > This project was originally proposed by The Odin Project [link](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/associations).
 
+![Screenshot](assets/imgs/event-index.png)
+![Screenshot](assets/imgs/events-info.png)
+![Screenshot](assets/imgs/users-event.png)
+
 ## Built With
 
 - Ruby 3.0.1
