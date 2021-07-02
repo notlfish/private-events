@@ -82,7 +82,7 @@ RSpec.describe 'Signing and Loging functionality' do
     end
   end
 
-  describe 'The not to assist process', type: :feature do
+  describe 'The not to attend process', type: :feature do
     it 'signs me in' do
       visit 'users/sign_in'
       within('#new_user') do
@@ -91,11 +91,10 @@ RSpec.describe 'Signing and Loging functionality' do
       end
       click_button 'Log in'
       click_link('Bob')
-      click_link("I won't assist, no no")
-      expect(page).to_not have_content "I won't assist, no no"
+      click_link("I won't attend")
+      expect(page).to_not have_content "I won't attend"
     end
   end
-  
 
   describe 'The deleting of the organised event process', type: :feature do
     it 'signs me in' do
@@ -106,9 +105,9 @@ RSpec.describe 'Signing and Loging functionality' do
       end
       click_button 'Log in'
       click_link('Bob')
-      expect(page).to have_content "Capybara began working"
+      expect(page).to have_content 'Capybara began working'
       click_link('Delete Event')
-      expect(page).to_not have_content "Capybara began working"
+      expect(page).to_not have_content 'Capybara began working'
     end
   end
 end

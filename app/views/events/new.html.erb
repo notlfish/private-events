@@ -1,12 +1,13 @@
-<h2>New Event<h2>
-    <%= form_with model: @event do |form|%>
-    <%= form.label :name, "Event" %>
-    <%= form.text_field :name %>
-    <%= form.label :date, "date" %>
-    <%= form.datetime_local_field :date %>
-    <%= form.label :venue, "venue" %>
-    <%= form.text_field :venue %><br>
-    <%= form.submit %>
-    <%end%>
+<h2>New Event</h2>
 
-    <%= render "errors", event: @event %>
+<%= form_with model: @event, class: "new-event" do |form| %>
+  <span class="form-label"><%= form.label :name, "Event" %></span>
+  <%= form.text_field :name %><br>
+  <span class="form-label"><%= form.label :date, "Date" %></span>
+  <%= form.datetime_local_field :date %><br>
+  <span class="form-label"><%= form.label :venue, "Venue" %></span>
+  <%= form.text_field :venue %>
+  <div><%= form.submit id: "input-button" %></div>
+<%end%>
+
+<%= render "errors", event: @event %>

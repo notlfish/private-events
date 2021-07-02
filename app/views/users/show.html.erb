@@ -4,9 +4,10 @@
   <h2>Organized events</h2>
   <ul>
     <% @user.created_events.each do |event| %>
-    <li><%= event.name %>
-      <%= link_to "Delete Event",  event, method: :delete%>
-    </li>
+      <li>
+        <%= event.name %><br>
+        <%= link_to "Delete event",  event, method: :delete, class:"delete-event"%>
+      </li>
     <% end %>
   </ul>
 </div>
@@ -18,7 +19,7 @@
     <% Event.past_events_of(@user).each do |event| %>
     <li>
       <span><%= event.name %></span>
-      <span><%= event.date.strftime('%d %b') %></span>
+      <span><%= render_date(event) %></span>
     </li>
     <% end %>
   </ul>
@@ -27,11 +28,11 @@
     <% Event.future_events_of(@user).each do |event| %>
     <li>
       <span><%= event.name %></span>
-      <span><%= event.date.strftime('%d %b') %></span>
+      <span><%= render_date(event) %></span><br>
       <span>
-        <%= link_to "I won't assist, no no",
+        <%= link_to "I won't attend",
          destroy_attendance_path(user: @user, event: event),
-         method: :delete %>
+         method: :delete, class: "not-attend" %>
       </span>
     </li>
     <% end %>
