@@ -5,7 +5,7 @@
   <% @events.each do |event| %>
     <li>
       <div>
-      <span><%= link_to event.name, event, class: "event-link" %></span>
+      <span class="event-link"><%= link_to event.name, event %></span>
       <span>in <%= event.venue %></span>
       </div>
       <div>
