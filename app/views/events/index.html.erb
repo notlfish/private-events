@@ -1,13 +1,14 @@
-<h1>I won't show you the events, like seriously :P</h1>
+<h1>Events in your local area</h1>
 
 <ul>
+  <li><%= link_to "New Event", new_event_path, class:"create" %></li>
   <% @events.each do |event| %>
   <li>
     <span>Event: <%= event.name %></span><br>
     <span>Venue: <%= event.venue %></span><br>
     <span>Date: <%= event.date %></span><br>
     <% if user_signed_in? %>
-      <%= link_to 'Join event', event_attendances_path(event: event), method: 'create'  %>
+    <%= link_to 'Join event', event_attendances_path(event: event), method: 'create'  %>
     <% end %>
   </li>
   <% end %>

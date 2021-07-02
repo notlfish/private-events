@@ -19,9 +19,8 @@
     <ul class="nav-list">
       <li><%=link_to "Home", root_path, class:"home"%></li>
       <% if user_signed_in?  %>
-      <li><%= link_to "New Event", new_event_path, class:"create" %></li>
-      <li><%= link_to current_user.name, user_path(current_user), class:"log" %></li>
       <li><%= link_to 'Log Out', destroy_user_session_path, method: 'delete', class:"log" %></li>
+      <li><%= link_to current_user.name, user_path(current_user), class:"user" %></li>
 
       <% else %>
       <li><%= link_to 'Sign Up', new_user_registration_path, class:"log" %></li>
@@ -29,7 +28,7 @@
       <% end %>
     </ul>
   </div>
-  <%= yield %>
+  <main><%= yield %></main>
 </body>
 
 </html>
