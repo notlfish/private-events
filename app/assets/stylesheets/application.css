@@ -94,19 +94,17 @@ ul {
   color: lightsalmon;
 }
 
-.submit{
+.submit {
   width: 90px;
-  /* background-color: white; */
-  padding: 6px;px;
-  color:inherit;
+  padding: 6px;
+  color: inherit;
   font-size: 16px;
 }
 
-.field{
+.field {
   font-size: 22px;
 }
 
 .text-input {
   font-size: 20px;
-  width: ;
 }
