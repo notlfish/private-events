@@ -1,0 +1,19 @@
+<h1><%= @event.name %> info</h1>
+
+<ul>
+  <li>Venue: <%= @event.venue %></li>
+  <li>
+    <span class="date">Date: <%= @event.date.strftime("%b %d") %></span>
+    at
+    <span class="time"><%= @event.date.strftime("%H:%M") %></span>
+  </li>
+  <li> Attendees
+    <ul class="attendees">
+      <% @event.attendees.each do |attendee| %>
+      <li>
+        <%= attendee.name %>
+      </li>
+      <% end %>
+    </ul>
+  </li>
+</ul>

@@ -1,0 +1,47 @@
+.create {
+  color: green;
+  font-size: 25px;
+  display: inline-block;
+  padding-bottom: 25px;
+}
+
+.join-event {
+  color: green;
+  padding-top: 0;
+  margin-top: -5px;
+}
+
+.events-list li {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 200px;
+}
+
+.form-label {
+  display: inline-block;
+  width: 60px;
+}
+
+.new-event {
+  width: 350px;
+}
+
+.new-event input {
+  width: 250px;
+}
+
+#input-button {
+  margin: 30px 120px;
+  width: 110px;
+  padding: 4px;
+}
+
+.event-link {
+  display: inline-block;
+  border-bottom: 2px grey dashed;
+}
+
+.attendees {
+  list-style: square;
+  padding-left: 19px;
+}

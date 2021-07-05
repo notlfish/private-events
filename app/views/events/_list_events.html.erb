@@ -1,0 +1,16 @@
+<% events.each do |event| %>
+  <li>
+    <div>
+      <span class="event-link"><%= link_to event.name, event %></span>
+      <span>in <%= event.venue %></span>
+    </div>
+    <div>
+      <span class="event-date"><%= render_date(event) %></span>
+    </div>
+  </li>
+  <li class="join-event">
+    <% if user_signed_in? && upcoming %>
+      <%= link_to 'Join event', event_attendances_path(event: event), method: 'post' %>
+    <% end %>
+  </li>
+<% end %>

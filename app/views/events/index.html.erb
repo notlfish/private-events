@@ -1,0 +1,10 @@
+<h1>Events in your local area</h1>
+
+<ul class="events-list">
+  <li><%= link_to "New Event", new_event_path, class:"create" %></li>
+  <h3>Past Events</h3>
+  <%= render 'list_events', events: @past_events, upcoming: false %>
+
+  <h3>Upcoming Events</h3>
+  <%= render 'list_events', events: @upcoming_events, upcoming: true %>
+</ul>

@@ -4,6 +4,12 @@ Simple rails webapp for organizing events.
 
 > This project was originally proposed by The Odin Project [link](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/associations).
 
+![Screenshot](assets/imgs/event-index.png)
+![Screenshot](assets/imgs/events-info.png)
+![Screenshot](assets/imgs/users-event.png)
+
+#### [Live version](https://pacific-hollows-10915.herokuapp.com/)
+
 ## Built With
 
 - Ruby 3.0.1
@@ -11,6 +17,7 @@ Simple rails webapp for organizing events.
 - sqlite3
 
 ## Getting Started
+### Installation
 
 **To use the code in this project, you'll need to have Ruby, Rails and sqlite3 installed in your computer.**
 
@@ -20,6 +27,7 @@ On GitHub bash:
 
   - To clone the project to your computer, run `git clone https://github.com/notlfish/private-events.git`
   - To enter the project folder, run `cd private-events`.
+  - To build the project, run `bundle install` and `yarn install` 
   - To set up the database, run `rails db:migrate`
   - To start the app, run `rails server`
   - Open http://localhost:3000/ in a browser to the home page of the web app.
@@ -30,8 +38,7 @@ On GitHub bash:
 Ruby, Rails and sqlite3 must be installed on your computer
 
 ### Run tests
-
-- RuboCop is set up to run locally. Just run `rubocop` in the root of the repo.
+- Run `bundle exec rspec` in the project folder to run tests.
 
 ## Authors
 
