@@ -15,13 +15,7 @@
   <div class="navbar">
     <ul class="nav-list">
       <li><%=link_to "Home", root_path, class:"home"%></li>
-      <% if user_signed_in?  %>
-      <li><%= link_to 'Log Out', destroy_user_session_path, method: 'delete', class:"log" %></li>
-      <li><%= link_to current_user.name, user_path(current_user), class:"user" %></li>
-      <% else %>
-      <li><%= link_to 'Sign Up', new_user_registration_path, class:"log" %></li>
-      <li><%= link_to 'Log In', new_user_session_path, class:"log" %></li>
-      <% end %>
+      <%= navbar_helper %>
     </ul>
   </div>
   <main>
