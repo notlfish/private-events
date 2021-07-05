@@ -87,11 +87,11 @@ ul {
 }
 
 .alert {
-  color: #f8e025;
+  color: orange;
 }
 
 .notice {
-  color: lightsalmon;
+  color: orange;
 }
 
 .submit {

@@ -15,7 +15,7 @@ class Event < ApplicationRecord
   #   user.attended_events.where(["date > ?", DateTime.now ])
   # end
 
-  scope :future_events_of, ->(user) { user.attended_events.where(['date > ?', DateTime.now]) }
+  scope :previous_events, -> { where(['date < ?', DateTime.now]) }
 
-  scope :past_events_of, ->(user) { user.attended_events.where(['date < ?', DateTime.now]) }
+  scope :upcoming_events, -> { where(['date > ?', DateTime.now]) }
 end

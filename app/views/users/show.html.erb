@@ -3,7 +3,7 @@
 <div>
   <h2>Organized events</h2>
   <ul>
-    <% @user.created_events.each do |event| %>
+    <% @created_events.each do |event| %>
       <li>
         <%= event.name %><br>
         <%= link_to "Delete event",  event, method: :delete, class:"delete-event"%>
@@ -16,7 +16,7 @@
   <h2>Attended events</h2>
   <h3>Past events</h3>
   <ul>
-    <% Event.past_events_of(@user).each do |event| %>
+    <% @past_events.each do |event| %>
     <li>
       <span><%= event.name %></span>
       <span><%= render_date(event) %></span>
@@ -25,7 +25,7 @@
   </ul>
   <h3>Future events</h3>
   <ul>
-    <% Event.future_events_of(@user).each do |event| %>
+    <% @upcoming_events.each do |event| %>
     <li>
       <span><%= event.name %></span>
       <span><%= render_date(event) %></span><br>

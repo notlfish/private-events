@@ -2,20 +2,9 @@
 
 <ul class="events-list">
   <li><%= link_to "New Event", new_event_path, class:"create" %></li>
-  <% @events.each do |event| %>
-    <li>
-      <div>
-      <span class="event-link"><%= link_to event.name, event %></span>
-      <span>in <%= event.venue %></span>
-      </div>
-      <div>
-        <span class="event-date"><%= render_date(event) %></span>
-      </div>
-    </li>
-    <li class="join-event">
-      <% if user_signed_in? %>
-        <%= link_to 'Join event', event_attendances_path(event: event), method: 'create' %>
-      <% end %>
-    </li>
-  <% end %>
+  <h3>Past Events</h3>
+  <%= render 'list_events', events: @past_events, upcoming: false %>
+
+  <h3>Upcoming Events</h3>
+  <%= render 'list_events', events: @upcoming_events, upcoming: true %>
 </ul>
