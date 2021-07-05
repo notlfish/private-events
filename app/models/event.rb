@@ -8,11 +8,11 @@ class Event < ApplicationRecord
   has_many :attendees, through: :event_attendances
 
   def self.past_events_of(user)
-    user.attended_events.where(["date < ?", DateTime.now])
+    user.attended_events.where(['date < ?', DateTime.now])
   end
 
   def self.future_events_of(user)
-    user.attended_events.where(["date > ?", DateTime.now ])
+    user.attended_events.where(['date > ?', DateTime.now])
   end
 
   scope :previous_events, -> { where(['date < ?', DateTime.now]) }
