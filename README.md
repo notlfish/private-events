@@ -8,6 +8,8 @@ Simple rails webapp for organizing events.
 ![Screenshot](assets/imgs/events-info.png)
 ![Screenshot](assets/imgs/users-event.png)
 
+#### [Live version](https://pacific-hollows-10915.herokuapp.com/)
+
 ## Built With
 
 - Ruby 3.0.1
